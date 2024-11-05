@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
-const Cart = ({ onClickCart }) => {
+const Cart = ({ onClickCart, onClickCheckout }) => {
   const { state } = useContext(CartContext);
   console.log(state.items);
 
@@ -34,7 +34,10 @@ const Cart = ({ onClickCart }) => {
         >
           Close
         </button>
-        <button className="bg-gray-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+        <button
+          onClick={onClickCheckout}
+          className="bg-gray-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
+        >
           Checkout
         </button>
       </div>

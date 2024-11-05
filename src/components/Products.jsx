@@ -7,6 +7,7 @@ import Product from "./Product";
 const Products = () => {
   const url = "http://localhost:3000/meals";
   const { fetchedData, isLoading, error } = useFetch(url,[]);
+  console.log("error"+error)
 
   return (
     <div className="flex flex-col">
